@@ -2,25 +2,110 @@
 title: "jjj"
 format: html
 editor: visual
+execute: 
+  warning: false
 ---
 
-## Quarto
+## making and indexing data in r
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+**Vectors**
 
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+making vectors
 
 ```{r}
-1 + 1
-```
+dogs <- c('teddy', 'khora','waffle', 'banjo', 'tallie', 'bolillo', 'concha')
 
-You can add options to executable code like this
+# check class of dog
+typeof(dogs)
+class(dogs)
+```
 
 ```{r}
-#| echo: false
-2 * 2
+my_breakfast <- c('waffle', 2, TRUE, 'coffee')
+
+typeof(my_breakfast)
+
+class(my_breakfast)
+# list can contain different types of classes
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+```{r}
+weights <-  c(50, 60, 25, 35, 55, 1, 1)
+
+typeof(weights)
+class(weights)
+
+```
+
+```{r}
+weights_integer <- c(50L, 60L, 25L, 35L, 55L, 1L, 1L)
+
+typeof(weights_integer)
+class(weights_integer)
+```
+
+```{r}
+is.numeric(weights_integer)
+```
+
+```{r}
+zipcodes <- c(93105, 93901, 93401)
+
+class(zipcodes)
+
+zipcodes_chr <- as.character(zipcodes)
+
+zipcodes_chr
+
+# use as. fmailly of functions to recast data classes
+# use is. family of fucntions to ask what class something is
+
+```
+
+Create a vector with named elements
+
+```{r}
+dog_food <- c(teddy = 'purina', waffle ='alpo', khora = 'fancy feast', banjo = 'blue diamond', tallie = "farmer's dog", bolillo = 'meat', concha = 'malt paste' )
+
+test <- c(cat =4, dog = 10, elephant = 50)
+class(test)
+```
+
+```{r}
+dog_food[2]
+
+# R uses 1 - index
+#  Python uses 0 - index
+```
+
+```{r}
+dog_food ['bolillo']
+
+```
+
+Accces Range of values in a vector
+
+use : to refer to a range low : high
+
+```{r}
+trees <- c('ponderosa','lodgepole', 'joshua', 'jefree', 'sugar', 'yoda')
+
+trees[1:3]
+
+```
+
+## Warm up for for loops
+
+```{r}
+i <- seq(1:3) # same as seq(from 1 =1, to = 3)
+
+joshua <- 4
+trees[i]
+trees[joshua]
+```
+
+```{r}
+trees[3] <- 'oak'
+
+trees
+```
