@@ -109,3 +109,17 @@ trees[3] <- 'oak'
 
 trees
 ```
+
+matrix indexing
+
+```{r}
+fish_size <- matrix(c(0.8, 1.2, 0.4, 0.9), ncol = 2, nrow = 2, byrow = FALSE)
+
+fish_size
+
+class(fish_size)
+str(fish_size)
+typeof(fish_size)
+
+fish_size[2,1]
+```
