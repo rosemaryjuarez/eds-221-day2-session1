@@ -123,3 +123,26 @@ typeof(fish_size)
 
 fish_size[2,1]
 ```
+
+```{r}
+urchin <- list('blue', c(1,2,3), values = c('lunch', 'dinner', 'dessert'), 5L)
+```
+
+```{r}
+urchins_list <- urchin[2]
+urchins_vector <- urchin [[2]]
+
+```
+
+```{r}
+sample1 = c(1,2,3,4,5,4,3,2,1)
+
+sample2 <- c(3,4,1,3,1,3,3,4,4)
+
+
+ttest_example <- t.test(sample1, sample2)
+
+ttest_example
+```
+
+mean size for trees in site A is greater than the mean size in site B `r ttest_example$p.value`
